@@ -14,7 +14,28 @@
         <com.example.lab.SpectraView
             android:id="@+id/spectraview"
             android:layout_width="match_parent"
-            android:layout_height="71dp" />
+            android:layout_height="100dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/element"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Element" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:visibility="visible" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,20 +56,6 @@
                 android:layout_weight="1"
                 android:text="-" />
 
-            <TextView
-                android:id="@+id/element"
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Element" />
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                tools:visibility="visible" />
-
             <Button
                 android:id="@+id/btn_load"
                 android:layout_width="wrap_content"
@@ -57,5 +64,6 @@
                 android:text="LOAD" />
 
         </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

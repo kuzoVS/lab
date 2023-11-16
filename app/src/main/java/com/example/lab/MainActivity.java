@@ -1,5 +1,6 @@
 package com.example.lab;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -12,9 +13,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.lab.ApiHelper;
-import com.example.lab.R;
-import com.example.lab.SpectraView;
 import com.example.lab.models.ChemElement;
 import com.example.lab.models.SpecLine;
 
@@ -67,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
                     adp.addAll(chemElements);
                     adp.notifyDataSetChanged();
+
                 } catch (JSONException ex) {
                     ex.printStackTrace();
                     Log.e("API_ERROR", "Error parsing elements: " + ex.getMessage());
@@ -87,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 String response = req.getResponse();
                 showNotification("API Response", response);
             }
-        }, 20000);
+        }, 20);
 
         b = findViewById(R.id.btn_load);
         b.setOnClickListener(new View.OnClickListener() {

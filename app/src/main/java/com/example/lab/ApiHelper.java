@@ -1,8 +1,6 @@
 package com.example.lab;
 
 import android.app.Activity;
-import android.util.Log;
-import android.widget.Toast;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
